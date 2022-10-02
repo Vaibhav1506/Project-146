@@ -1,0 +1,116 @@
+<!Doctype html>
+<html>
+    <head>
+        <script src = "https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+            <a-entity position = "0 2 15">
+                <a-camera>
+                </a-camera>
+            </a-entity>
+
+            <!--Background-Sky-->
+            <a-entity id = "background">
+            <a-sky color="#EBEBEB"></a-sky>
+            </a-entity>
+            
+            <!--Base-->
+            <a-entity id = "base">
+            <a-plane position = "0 0 0" color = "black" rotation = "275 0 0" width = "10" height = "10"></a-plane>
+            </a-entity>
+
+            <!--Feet-->
+            <a-entity id = "feet">
+                <a-sphere position = "-0.7 -0.3 2" radius = "0.5" color = "#FF7470"></a-sphere>
+                <a-sphere position = "0.7 -0.3 2" radius = "0.5" color = "#FF7470"></a-sphere>
+            </a-entity>
+
+            <!--Limbs-->
+            <a-entity id = "limbs">
+                <a-cylinder position = "-0.7 0.5 2.1" radius = "0.25" height = "1.5" color = "#FFBA10"></a-cylinder>
+                <a-cylinder position = "0.7 0.5 2.1" radius = "0.25" height = "1.5" color = "#FFBA10"></a-cylinder>
+            </a-entity>
+
+            <!--Springs-->
+            <a-entity>
+                <a-ring position = "-0.7 0.5 2.1" radius-inner = "0.4" radius-outer = "0.5" color = "#EFEFEF" rotation = "275 0 0"></a-ring>
+                <a-ring position = "-0.7 0.7 2.1" radius-inner = "0.4" radius-outer = "0.5" color = "#EFEFEF" rotation = "275 0 0"></a-ring>
+                <a-ring position = "-0.7 0.3 2.1" radius-inner = "0.4" radius-outer = "0.5" color = "#EFEFEF" rotation = "275 0 0"></a-ring>
+                <a-ring position = "0.7 0.5 2.1" radius-inner = "0.4" radius-outer = "0.5" color = "#EFEFEF" rotation = "275 0 0"></a-ring>
+                <a-ring position = "0.7 0.7 2.1" radius-inner = "0.4" radius-outer = "0.5" color = "#EFEFEF" rotation = "275 0 0"></a-ring>
+                <a-ring position = "0.7 0.3 2.1" radius-inner = "0.4" radius-outer = "0.5" color = "#EFEFEF" rotation = "275 0 0"></a-ring>
+            </a-entity>
+
+            <!--Body-->
+            <a-entity id = "body">
+                <a-box position = "0 2.37 2.15" color = "#0386C2" height = "3" width = "3" length = "3"></a-box>
+                <a-plane position = "-0.87 3.3 2.65" color = "yellow" height = "0.8" length = "0.8" width = "0.8"></a-plane>
+                <a-plane position = "0.02 3.3 2.65" color = "crimson" height = "0.8" length = "0.8" width = "0.8"></a-plane>
+                <a-plane position = "0.9 3.3 2.65" color = "yellow" height = "0.8" length = "0.8" width = "0.8"></a-plane>
+                <a-plane position = "-0.85 3.3 2.65" color = "yellow" height = "0.8" length = "0.8" width = "0.8"></a-plane>
+                <a-plane position = "-0.85 2.4 2.65" color = "#E0517C" height = "0.8" length = "0.8" width = "0.8"></a-plane>
+                <a-plane position = "0.02 2.4 2.65" color = "purple" height = "0.8" length = "0.8" width = "0.8"></a-plane>
+                <a-plane position = "0.9 2.4 2.65" color = "#E0517C" height = "0.8" length = "0.8" width = "0.8"></a-plane>
+                <a-plane position = "-0.87 1.5 2.65" color = "yellow" height = "0.8" length = "0.8" width = "0.8"></a-plane>
+                <a-plane position = "0.02 1.5 2.65" color = "crimson" height = "0.8" length = "0.8" width = "0.8"></a-plane>
+                <a-plane position = "0.9 1.5 2.65" color = "yellow" height = "0.8" length = "0.8" width = "0.8"></a-plane>
+            </a-entity>
+
+            <!--Hands-->
+            <a-entity id = "hands">
+                <a-cylinder position = "1.8 3 2.15" radius = "0.2" height = "1.3" color = "#FFBA10" rotation = "0 0 45"></a-cylinder>
+                <a-sphere position = "2.3 2.5 2.15" radius = "0.35" color = "#FF7470"></a-sphere>
+                <a-cylinder position = "2.8 3 2.15" color = "#FFBA10" radius = "0.2" height = "0.9" rotation = "0 0 135"></a-cylinder>
+                <a-dodecahedron position = "3.3 3.5 2.15" color = "#0386C2" radius = "0.5"></a-dodecahedron>
+                <a-cylinder position = "-1.8 3 2.15" radius = "0.2" height = "1.3" color = "#FFBA10" rotation = "0 0 -45"></a-cylinder>
+                <a-sphere position = "-2.3 2.5 2.15" radius = "0.35" color = "#FF7470"></a-sphere>
+                <a-cylinder position = "-2.8 3 2.15" color = "#FFBA10" radius = "0.2" height = "0.9" rotation = "0 0 -135"></a-cylinder>
+                <a-dodecahedron position = "-3.3 3.5 2.15" color = "#0386C2" radius = "0.5"></a-dodecahedron>
+            </a-entity>
+
+            <!--Neck-->
+            <a-entity id = "neck">
+                <a-box position = "0 4.2 2.15" height = "0.65" length = "2" width = "1.5" color = "#FFBA10"></a-box>
+            </a-entity>
+
+            <!--Head-->
+            <a-entity id = "head">
+                <a-box position = "0 5.47 2.15" color = "#0386C2" height = "2" width = "2.3" length = "1"></a-box>
+            </a-entity>
+
+            <!--Mouth-->
+            <a-entity id = "mouth">
+                <a-ring position = "0 5.5 2.65" radius-outer = "0.7" radius-inner = "0.6" rotation = "0 0 90" color = "#FFBA10" theta-start = "110" theta-length = "140"></a-ring>
+            </a-entity>
+
+            <!--Eyes-->
+            <a-entity id = "eyes">
+                <a-sphere position = "-0.5 5.8 2.6" radius = "0.25"></a-sphere>
+                <a-sphere position = "0.5 5.8 2.6" radius = "0.25"></a-sphere>
+            </a-entity>
+
+            <!--Pupils-->
+            <a-entity id = "pupils">
+                <a-sphere position = "-0.5 5.8 2.8" radius = "0.125" color = "black"></a-sphere>
+                <a-sphere position = "0.5 5.8 2.8" radius = "0.125" color = "black"></a-sphere>
+            </a-entity>
+
+            <!--Microcontroller-->
+            <a-entity id = "microcontroller">
+                <a-sphere position = "0 6.48 2.17" radius = "0.45" color = "#FFBA10" theta-start = "90" theta-length = "180" rotation = "180 0 0"></a-sphere>
+            </a-entity>
+
+            <!--Antenna-->
+            <a-entity id = "antenna">
+                <a-cylinder position = "0 7.3 2.17" height = "0.9" radius = "0.01" color = "black"></a-cylinder>
+            </a-entity>
+
+            <!--Transmitter-->
+            <a-entity id = "transmitter">
+                <a-sphere position = "0 7.8 2.17" radius = "0.22" color = "#FF7470"></a-sphere>
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
